@@ -131,7 +131,7 @@ function Board({ themeColor, changeTheme }) {
                 </DrawerHeader>
                 <Divider />
                 <List>
-                    {['Upcoming Movies', 'New Movies', 'Old Movies', 'Horror Movies'].map((text, index) => (
+                    {['Home'].map((text, index) => (
                         <ListItem key={text} disablePadding>
                             <ListItemButton>
                                 <ListItemText primary={text} />
