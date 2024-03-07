@@ -20,7 +20,7 @@ const TableComponent = () => {
       id: '2',
       title: 'In Progress',
       rows: [
-        // { id: '1', content: 'Row 1 - Column 2', taskName: "" },
+        { id: '2', content: 'Row 1 - Column 2', taskName: "" },
         // Add more rows as needed
       ],
     },
@@ -28,7 +28,7 @@ const TableComponent = () => {
       id: '3',
       title: 'Completed',
       rows: [
-        // { id: '1', content: 'Row 1 - Column 3', taskName: "" },
+        { id: '3', content: 'Row 1 - Column 3', taskName: "" },
         // Add more rows as needed
       ],
     },
@@ -52,7 +52,7 @@ const TableComponent = () => {
     const sourceColumn = columns[source.droppableId];
     const destinationColumn = columns[destination.droppableId];
 
-    const sourceRows = [...sourceColumn.rows];
+    const sourceRows = [...sourceColumn?.rows];
     const destinationRows = [...destinationColumn.rows];
 
     // Remove from source column
@@ -76,8 +76,7 @@ const TableComponent = () => {
 
   const handleChange = (value, col, row) => {
     console.log('value', value)
-    console.log('col', col)
-    console.log('row', row)
+    
   }
 
   // const handleAddTask=(columnId)=>{
@@ -145,9 +144,9 @@ const TableComponent = () => {
                           )}
                         </Draggable>
                       ))}
-                      <Button variant="outlined"  startIcon={<AddIcon />}>
+                      {/* <Button variant="outlined"  startIcon={<AddIcon />}>
                         Add Task
-                      </Button>
+                      </Button> */}
                     </div>
                   )}
                 </Droppable>
