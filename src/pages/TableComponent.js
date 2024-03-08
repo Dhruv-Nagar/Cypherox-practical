@@ -9,30 +9,36 @@ const TableComponent = () => {
   // Sample data
   const [columns, setColumns] = useState({
     column1: {
-      id: '1',
+      id: 'column1',
       title: 'To Do',
       rows: [
-        { id: '1', content: 'Row 1 - Column 1', taskName: "" }
+        { id: '1', content: 'Row 1 - Column 1', taskName: "" },
+        { id: '2', content: 'Row 2 - Column 1', taskName: "" }
         // Add more rows as needed
       ],
     },
     column2: {
-      id: '2',
+      id: 'column2',
       title: 'In Progress',
       rows: [
-        { id: '2', content: 'Row 1 - Column 2', taskName: "" },
+        { id: '3', content: 'Row 1 - Column 2', taskName: "" },
+        { id: '4', content: 'Row 2 - Column 2', taskName: "" },
         // Add more rows as needed
       ],
     },
     column3: {
-      id: '3',
+      id: 'column3',
       title: 'Completed',
       rows: [
-        { id: '3', content: 'Row 1 - Column 3', taskName: "" },
+        { id: '5', content: 'Row 1 - Column 2',taskName: "" },
+        { id: '6', content: 'Row 2 - Column 2',taskName: "" },
         // Add more rows as needed
       ],
     },
   });
+
+
+ 
   const [showEditIcon, setShowEditIcon] = useState(false)
   const [currentIndex, setCurrentIndex] = useState(null)
 

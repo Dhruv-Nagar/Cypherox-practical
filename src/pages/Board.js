@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { fetchUpcomingMovies } from '../redux/actions/moviesActions'
 import { styled, useTheme } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Drawer from '@mui/material/Drawer';
@@ -73,8 +72,8 @@ const DrawerHeader = styled('div')(({ theme }) => ({
 }));
 
 function Board({ themeColor, changeTheme }) {
-    const upcomingMovies = useSelector((state) => state.allMovies)
-    const dispatch = useDispatch()
+   
+ 
     const theme = useTheme();
     const [open, setOpen] = useState(false);
 
@@ -85,9 +84,9 @@ function Board({ themeColor, changeTheme }) {
     const handleDrawerClose = () => {
         setOpen(false);
     };
-    useEffect(() => {
-        dispatch(fetchUpcomingMovies())
-    }, [])
+    // useEffect(() => {
+    //     dispatch(fetchUpcomingMovies())
+    // }, [])
 
     return (
         <Box sx={{ display: 'flex' }}>
